@@ -36,7 +36,7 @@ export class HomePage {
   }
 
   editTodo(todo) {
-    console.log('TODO: finish edit to do');
+    console.log(todo);
   }
 
 }
