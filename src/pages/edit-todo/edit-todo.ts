@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the EditTodoPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-edit-todo',
@@ -14,11 +7,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class EditTodoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  todo: any;
+
+  constructor(public navCtrl: NavController) {
+
+    this.todo = {
+      title: '',
+      desription: ''
+    };
+
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad EditTodoPage');
+
+  }
+
+  save() {
+    console.log("TODO: finish save function");
   }
 
 }
