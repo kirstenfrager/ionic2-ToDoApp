@@ -13,7 +13,7 @@
 
   <ion-list>
     <!-- button calls editTodo function from home.ts - supplies todo parameter which takes todo in the loop and calls the function on that -->
-    <button ion-item (click)="editTodo(todo)" *ngFor="let todo of todos">
+    <button ion-item (click)="editTodo(todo)" *ngFor="let todo of dataService.todos">
       {{todo.title}}
     </button>
   </ion-list>
