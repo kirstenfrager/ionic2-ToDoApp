@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { EditTodoPage } from '../edit-todo/edit-todo';
 
 // decorator provides a bit of additional data about the component
 @Component({
@@ -31,12 +32,16 @@ export class HomePage {
 
   }
 
+// pushes the page onto the stack which can then be popped off of the stack
   addTodo() {
-    console.log('TODO: finish add to do');
+    this.navCtrl.push(EditTodoPage);
   }
 
+// todo details gets pushed to the edit page which gets displayed in the edit-todo.html ngModule
   editTodo(todo) {
-    console.log(todo);
+    this.navCtrl.push(EditTodoPage, {
+      todo: todo
+    });
   }
 
 }
