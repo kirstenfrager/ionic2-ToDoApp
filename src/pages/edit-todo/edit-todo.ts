@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-edit-todo',
@@ -9,7 +9,7 @@ export class EditTodoPage {
 
   todo: any;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
 
     this.todo = {
       title: '',
@@ -19,11 +19,19 @@ export class EditTodoPage {
   }
 
   ionViewDidLoad() {
+  // grab todo from navParams
+    let todo = this.navParams.get('todo');
+
+  // check if exists otherwise errors occur
+  // check the type of todo does not = undefined. if not undefined set todo member variable to whatever todo was passed in
+    if(typeof(todo) != "undefined") {
+      this.todo= todo;
+    }
 
   }
 
   save() {
-    console.log("TODO: finish save function");
+    this.navCtrl.pop()
   }
 
 }
