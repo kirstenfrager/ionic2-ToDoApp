@@ -1,26 +1,31 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# **Ionic 2 - ToDo App**
 
-## How to use this template
+Briefly touching on some of the core concepts of Ionic 2 to build a basic to-do application and where styling concepts would be applied.
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+### Getting Started
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
+To create application with ionic:
+```
+ionic start IonicToDoApp blank
 ```
 
-Then, to run it, cd into `myBlank` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+To run server:
+```
+ionic serve
 ```
 
-Substitute ios for android if not on a Mac.
+### Inclusions
 
+- home page displaying looping through list of to-dos
+- on click you can edit the item title and description
+- 'add' icon-only button in navbar for adding a to-do item
+- save button function
+- edit button function
+- data storage included for local storage of items
+
+### Platform
+
+![Home Page](https://lh3.googleusercontent.com/-XB2fefBZ-E4/WVGxv_UQp1I/AAAAAAAAAPo/OXAcvbcCn-AxHlZkl3TlU72jU8aBhzUPgCLcBGAs/s500/Screen+Shot+2017-06-27+at+11.13.57+am.png "Screen Shot 2017-06-27 at 11.13.57 am.png")
+
+
+![Edit Page](https://lh3.googleusercontent.com/-Vd1YC0QQers/WVGyYN3Xe6I/AAAAAAAAAP0/Dcok7b6RVJwBvT-JOEOJP3MnTAzhdu-egCLcBGAs/s500/Screen+Shot+2017-06-27+at+11.14.12+am.png "Screen Shot 2017-06-27 at 11.14.12 am.png")
