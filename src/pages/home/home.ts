@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { EditTodoPage } from '../edit-todo/edit-todo';
+import { Data } from '../../providers/data';
 
 // decorator provides a bit of additional data about the component
 @Component({
@@ -10,26 +11,17 @@ import { EditTodoPage } from '../edit-todo/edit-todo';
   templateUrl: 'home.html'
 })
 export class HomePage {
-// this variable can have any type of data in it
-  todos: any;
 
 // constructor function that runs immediately
 // dependency injection - member variabe navCtrl with type NavController - throughout class can now access this.navCtrl
 // if public key word is not there it means that navCtrl cannot be accessed anywhere throughout this class
-  constructor(public navCtrl: NavController) {
-  // because defined above the constructor, sets it up as a member variable which means it is accessible anywhere inside the class with this.
-    this.todos = [
-      {title: 'Todo 1', description: 'abc'},
-      {title: 'Todo 2', description: 'abc'},
-      {title: 'Todo 3', description: 'abc'},
-      {title: 'Todo 4', description: 'abc'},
-      {title: 'Todo 5', description: 'abc'}
-    ];
+  constructor(public navCtrl: NavController, public dataService: Data) {
 
   }
 
+// as soon as page did load we want to call the dataService and handles loading in the data
   ionViewDidLoad() {
-
+    this.dataService.load();
   }
 
 // pushes the page onto the stack which can then be popped off of the stack
