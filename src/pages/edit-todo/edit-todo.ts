@@ -31,6 +31,7 @@ export class EditTodoPage {
 
   }
 
+// before we pop the page off we call the dataService and save the data with the single todo that we are editing
   save() {
     this.dataService.save(this.todo);
     this.navCtrl.pop()

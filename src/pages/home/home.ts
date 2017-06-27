@@ -19,6 +19,7 @@ export class HomePage {
 
   }
 
+// as soon as page did load we want to call the dataService and handles loading in the data
   ionViewDidLoad() {
     this.dataService.load();
   }
