@@ -22,6 +22,7 @@ ionic serve
 - save button function
 - edit button function
 - data storage included for local storage of items
+- heavily commented to explain process and what it happening
 
 ### Platform
 
