@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="danger">
     <ion-title>
       To-Do
     </ion-title>
@@ -11,7 +11,7 @@
 
 <ion-content>
 
-  <ion-list>
+  <ion-list no-lines>
     <!-- button calls editTodo function from home.ts - looks at array from dataService and loops through that -->
     <button ion-item (click)="editTodo(todo)" *ngFor="let todo of dataService.todos">
       {{todo.title}}
